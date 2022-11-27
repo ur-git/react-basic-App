@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import "./ExpenseItem.css"; //styling components
 import ExpenseDate from "./ExpenseDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 function ExpenseItem(props) {
   //one of the react hook
