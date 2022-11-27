@@ -1,17 +1,11 @@
 // Component in React is just a Javascript Function which returns JSX
 import "./ExpenseItem.css"; //styling components
+import ExpenseDate from "./ExpenseDate";
 
-function ExpenseItem(props) {
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  const date = props.date.toLocaleString("en-US", { day: "2-digit" });
-  const year = props.date.getFullYear();
+function ExpenseItem(props) {  
   return (
     <div className="expense-item">
-      <div>
-        <div>{month}</div>
-        <div>{date}</div>
-        <div>{year}</div>
-      </div>
+      <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">{props.amount}</div>
